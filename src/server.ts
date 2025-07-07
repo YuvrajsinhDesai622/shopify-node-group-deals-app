@@ -72,6 +72,7 @@ app.get("/api/sync-products", async (req, res) => {
       }
     );
 
+    
     await Promise.all(
       response.data.products.map(async (product) => {
         await Product.findOneAndUpdate(
